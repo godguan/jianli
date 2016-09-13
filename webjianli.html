@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <title>Title</title>
+    <style type="text/css">
+        #header {
+            width:100%;
+            height: 200px;
+            background-image: url("images/banner.png");
+        }
+        .header_clearfix {
+            width: 960px;
+            height:200px;
+            margin:0 auto;
+        }
+        .logo {
+            width: 750px;
+            height:159px;
+            float: left;
+            margin-top: 18px;
+        }
+        .logo_name {
+            width:750px;
+            height:95px;
+            font-size: 78px;
+            color: #fff;
+            line-height: 95px;
+            float: left;
+            text-shadow: 0 -2px 5px #fe2b0e,0 -5px 5px #fe2b0e,0 -9px 6px #f5b27a,0 -13px 10px #f1d3ba;
+        }
+        .logo_worker {
+            font-size: 55px;
+        }
+        .logo_power {
+            width:360px;
+            height:35px;
+            background: #000;
+            margin-top: 100px;
+            border-radius: 25px;
+        }
+        .logo_power_thr {
+            line-height: 35px;
+            font-size: 25px;
+            color: #fff;
+            margin-left:20px;
+            text-shadow: 0 0 10px #d600d6,0 0 20px #df00df,0 0 30px #df00df,0 0 40px #df00df;
+        }
+        #main {
+            width:100%;
+            height:3607px;
+            background: #D4D0D0;
+        }
+        #nav {
+            width: 100%;
+            height:46px;
+            background: #000;
+        }
+        .navWarp {
+            width:960px;
+            height:46px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .navWarp li {
+            float: left;
+        }
+        .navWarp li a {
+            padding: 0 10px;
+            display: block;
+            height: 46px;
+            line-height: 46px;
+            float: left;
+            color: #fff;
+            font-size: 24px;
+            -webkit-transition: all 0.5s;
+        }
+        .navWarp li a:hover {
+            -webkit-transform:rotate(360deg);
+        }
+        #content {
+            width: 1200px;
+            height:684px;
+            margin:0 auto;
+        }
+        .content_p {
+            width:1200px;
+            height:684px;
+        }
+        .swiper-container {
+            width: 1200px;
+            height: 600px;
+        }
+        .swiper-slide {
+            width:1200px;
+            height:600px;
+        }
+        .swiper-slide img {
+            width:1200px;
+            height:600px;
+        }
+        .blue-slide {
+            background: #4390EE;
+        }
+        .red-slide {
+            background: #CA4040;
+        }
+        .wirte-slide {
+            background: #fff;
+        }
+        #img_s1 {
+             width: 486px;
+             height:600px;
+             margin-left: 364px;
+        }
+        #img_s2 {
+            width: 486px;
+            height:600px;
+            margin-left: 364px;
+        }
+        #content2 {
+            width:1200px;
+            height:385px;
+            margin: 0 auto;
+            background: #fff;
+            overflow: hidden;
+        }
+        .content2_p {
+            width:1200px;
+            height:385px;
+            position: relative;
+        }
+        #img_2 {
+            width:239px;
+            height:255px;
+            position: absolute;
+            left:880px;
+            top:75px;
+        }
+        .index_h2 {
+            border-bottom: 1px solid #ebebeb;
+            padding: 10px;
+            font-size: 24px;
+            color: #626262;
+            font-weight: bold;
+        }
+        .index_h2_p1 {
+            line-height: 30px;
+            padding: 10px;
+            font-size: 24px;
+        }
+        #content3 {
+            width:1200px;
+            height:456px;
+            margin:30px auto;
+            background: #fff;
+        }
+        .content3_p {
+            width:1200px;
+            height:456px;
+            overflow: hidden;
+            position: relative;
+        }
+        #content4 {
+            width:1200px;
+            height:805px;
+            margin:30px auto;
+            background: #fff;
+        }
+        .content4_p {
+            width:1200px;
+            height:805px;
+            overflow: hidden;
+            position: relative;
+        }
+        #content5 {
+            width:1200px;
+            height:1100px;
+            margin:30px auto;
+            background: #fff;
+        }
+        .content5_p {
+            width:1200px;
+            height:1100px;
+            overflow: hidden;
+            position: relative;
+        }
+        #nav_s {
+            width: 100%;
+            height:46px;
+            background: #000;
+            position: fixed;
+            top:0;
+            z-index: 100;
+        }
+        .navWarp_s {
+            width:960px;
+            height:46px;
+            margin: 0 auto;
+        }
+        .navWarp_s li {
+            float: left;
+        }
+        .navWarp_s li a {
+            padding: 0 10px;
+            display: block;
+            height: 46px;
+            line-height: 46px;
+            float: left;
+            color: #fff;
+            font-size: 24px;
+            -webkit-transition: all 0.5s;
+        }
+        .navWarp_s li a:hover {
+            -webkit-transform:rotate(360deg);
+        }
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="header_clearfix">
+            <div class="logo">
+                <p class="logo_name">肖冠阳
+                    <span class="logo_worker">-web前端工程师</span>
+                </p>
+                <div class="logo_power">
+                    <p class="logo_power_thr">HTML+CSS+JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="nav">
+            <ul class="navWarp">
+                <li id="li1">
+                    <a href="###">基本资料</a>
+                </li>
+                <li id="li2">
+                    <a href="###">工作经验</a>
+                </li>
+                <li id="li3">
+                    <a href="###">项目经验</a>
+                </li>
+                <li id="li4">
+                    <a href="###">专业技能</a>
+                </li>
+                <li>
+                    <a href="###">联系我吧</a>
+                </li>
+            </ul>
+        </div>
+        <!--<div id="nav_s" class="hide">-->
+            <!--<ul class="navWarp_s">-->
+                <!--<li id="">-->
+                    <!--<a href="###">基本资料</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="###">工作经验</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="###">项目经验</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="###">专业技能</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="###">联系我吧</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <div id="content">
+            <div class="content_p">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide blue-slide">
+                            <a href="http://www.appshike.com/"><img src="images/1.jpg"></a>
+                        </div>
+                        <div class="swiper-slide red-slide">
+                            <a href="http://www.appshike.com/"><img src="images/2.jpg"></a>
+                        </div>
+                        <div class="swiper-slide wirte-slide">
+                            <a href="http://www.appshike.com/"><img id="img_s1" src="images/FullSizeRender(2).jpg"></a>
+                        </div>
+                        <div class="swiper-slide red-slide">
+                            <a href="http://www.appshike.com/"><img src="images/3.jpg"></a>
+                        </div>
+                        <div class="swiper-slide red-slide">
+                            <a href="http://www.appshike.com/"><img src="images/4.jpg"></a>
+                        </div>
+                        <div class="swiper-slide wirte-slide">
+                            <a href="http://www.appshike.com/"><img id="img_s2" src="images/FullSizeRender.jpg"></a>
+                        </div>
+                        <!--<div class="swiper-slide red-slide">Slide 3</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content2">
+            <div class="content2_p">
+                <h2 class="index_h2">
+                    <span>基本资料</span>
+                </h2>
+                <p class="index_h2_p1">
+                    <span>姓名：肖冠阳</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span>教育背景：大连民族大学  土木工程系</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span>学历：本科</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span>联系电话：</span><span style="color: #000;background: #000">18515215091</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span>邮箱：</span><span style="color: #000;background: #000">1462302658@qq.com</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span>籍贯：黑龙江</span>
+                </p>
+                <img id="img_2" src="images/A6AC2E5F2D06409787AFC5BCEFCA9837.jpg">
+            </div>
+        </div>
+        <div id="content3">
+            <div class="content3_p">
+                <h2 class="index_h2">
+                    <span>工作经验</span>
+                </h2>
+                <p class="index_h2_p1">
+                    <span>北京多点科技股份有限公司</span>
+                    <span style="float: right">2014.09—2016.05</span>
+                </p>
+                <p class="index_h2_p1">
+                <span>工作描述：</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span>1. 参与公司移动端产品的设计和开发，负责前端功能的开发和优化；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span>2. 开发基于HTML5技术的可灵活定制、可拓展的前端UI组件；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span>3 使用JS编写封装良好的前端交互组件，维护及优化前端页面展示性能；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span>4. 页面通过标准校验，完美兼容Safari浏览器；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span>5. app混合应用的研发（只适用于ios平台；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span>6. 配合后端人员实现产品功能与操作流程。。</span>
+                </p>
+            </div>
+        </div>
+        <div id="content4">
+            <div class="content4_p">
+                <h2 class="index_h2">
+                    <span>项目经验</span>
+                </h2>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">1.多点科技官网  （pc端、移动端）  </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">项目描述：</span><span>多点科技官方网页，宣传介绍主要产品应用试客。 </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">使用技术：</span><span>HTML/CSS、JavaScript、jQuery、HTML5、Swiper</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">项目职责：</span><span>使用HTML5、CSS实现页面的基本布局，使用JavaScript实现对页面的优化及鼠标悬浮效果。
+负责日常网站的维护及更新。</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">2.应用试客移动端界面（Safari） </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">项目描述：</span><span>应用试客只针对ios用户，用户可以通过微信公众号链接打开
+Safari浏览器，用户在Safari浏览器中使用应用试客下载试玩app并可查询、申请提现、邀请好友等功能 </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">使用技术：</span><span>HTML/CSS、HTML5、JavaScript、jQuery Mobile</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">项目职责：</span><span>使用HTML5/CSS3进行移动端页面布局并使用jQuery Mobile.js框架，适用于所有流行的智能手机和平板电脑。使用jQuery Mobile.js框架中的taphold事件复制关键词并跳转到App Store中。</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">3.应用试客内部管理系统前端界面（pc端）  </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">项目描述：</span><span>公司内部管理系统前端界面，用于统计各款app每个时间段的下载量、返还金额等数据。 </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">使用技术：</span><span>HTML/CSS、JavaScript、HTML5</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">项目职责：</span><span>使用HTML/CSS对管理界面布局管理，用JavaScript实现管理系统功能需要，并用HTML5中的日历控件可以选择时间段来查看所选时间段的数据。</span>
+                </p>
+            </div>
+        </div>
+        <div id="content5">
+            <div class="content5_p">
+                <h2 class="index_h2">
+                    <span>专业技能</span>
+                </h2>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">HTML & CSS：  </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">1：</span><span>精通DIV+CSS布局的HTML代码编写 ;</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">2：</span><span>熟悉w3c代码规范，能够合理使用的标签和CSS样式，嵌套合理，代码简洁、有语义、易于维护；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">3：</span><span>熟悉前端各种性能优化手段；能够良好的处理各大浏览器兼容问题，熟练使用页面调试工具，并且使用各个浏览器hack保持各浏览器的兼容性；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">4：</span><span>熟悉前端各种性能优化手段；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">5：</span><span>熟悉SEO，开发过程中注重SEO搜索引擎优化，及提高代码书写质量来提升页面的加载速率。</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">JavaScript & Jquery: </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">1：</span><span>熟练掌握JavaScript的基本操作; </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">2：</span><span>能熟练运用原生JS编写出各大网站常见的动态效果，例如tab切换、图片间隔滚动、大图滚动、放大镜、拖拽等；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">3：</span><span>能够熟练的运用正则表达式写出常见的表单验证；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">4：</span><span>对闭包、作用域、构造函数、面向对象、DOM等JavaScript理论知识有一定的理解；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">5：</span><span>熟悉jquery等JS常用框架，能够熟练使用jquery框架实现原生JavaScript效果、制作网站常见动画效果。</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">Ajax：  </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span> AJAX异步交互，运用AJAX实现JSON、HTML等各种文件的异步加载，实现前后台的交互，完成AJAX项目开发。 </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">HTML5 & CSS3：</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">1：</span><span>熟悉运用CSS3实现分栏布局、背景效果、圆角、阴影、渐变、3D特效等新技术，实现常见的视觉特效； </span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">2：</span><span>熟练掌握html5新增标签特性，如包括音视频、本地缓存、离线缓存、拖拽，以及新增加的表单属性等；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">3：</span><span>利用canvas制作简单的图形和效果；</span>
+                </p>
+                <p class="index_h2_p1">
+                    <span style="font-weight: bold">4：</span><span>掌握响应式布局的原理，可以实现多平台的响应式适配。</span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script type="text/javascript">
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay:2000,
+            speed:800,
+            effect : 'cube',
+            cube: {
+                slideShadows: true,
+                shadow: true,
+                shadowOffset: 100,
+                shadowScale: 0.6
+            }
+        });
+        var a,timer;
+        var a = document.documentElement.scrollTop||window.pageYOffest||document.body.scrollTop;
+//        window.onscroll=function(){
+//            a = document.documentElement.scrollTop||window.pageYOffest||document.body.scrollTop;
+//            console.log(a);
+//            if (a>=200) {
+//                nav_s.className = "show"
+//            }else{
+//                nav_s.className = "hide"
+//            }
+//        };
+        li1.onclick=function(){
+            timer = setInterval(function(){
+
+                a+=10;
+                if(a>=925){
+                    a=925;
+                    clearInterval(timer)
+                }
+                document.documentElement.scrollTop =a;
+                window.pageYOffest=a;
+                document.body.scrollTop=a;
+
+            },1)
+        }
+        li2.onclick=function(){
+            timer = setInterval(function(){
+
+                a+=10;
+                if(a>=1320){
+                    a=1320;
+                    clearInterval(timer)
+                }
+                document.documentElement.scrollTop =a;
+                window.pageYOffest=a;
+                document.body.scrollTop=a;
+
+            },1)
+        }
+        li3.onclick=function(){
+            timer = setInterval(function(){
+
+                a+=10;
+                if(a>=1786){
+                    a=1786;
+                    clearInterval(timer)
+                }
+                document.documentElement.scrollTop =a;
+                window.pageYOffest=a;
+                document.body.scrollTop=a;
+
+            },1)
+        }
+        li4.onclick=function(){
+            timer = setInterval(function(){
+
+                a+=10;
+                if(a>=2601){
+                    a=2601;
+                    clearInterval(timer)
+                }
+                document.documentElement.scrollTop =a;
+                window.pageYOffest=a;
+                document.body.scrollTop=a;
+
+            },1)
+        }
+
+    </script>
+</body>
+</html>
